@@ -1,13 +1,12 @@
 :root {
-    --primary-color: #1ca71c;
-    --secondary-color: #5f0276;
-    --tertiary-color: #00090a;
+    --primary-color: #d4f8f6;
+    --secondary-color: #3bade2;
+    --tertiary-color: #0a272b;
   }
   *  {
-    top: 0;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  padding: 0;
+    background-color: var(--primary-color);
   }
   /*Header start*/
   header {
@@ -16,38 +15,32 @@
     justify-content: space-between;
     flex-wrap: wrap;
     top: 0;
-    background-image: url("../images/ss13_hero.jpg");
+    background-color:var(--secondary-color);
     background-size: cover;
     background-attachment: fixed;
     background-position: 100%;
-
   }
-  .name{
+  
+  header h1 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-  header h1 {
     font-weight: bold;
     margin: 0;
     font-size: 36px;
-    color: var(--primary-color);
+    border-bottom: 5px solid black;
+    padding-bottom: 5px;
+    background: var(--primary-color);
+    color: var(--tertiary-color);
     text-shadow: 0 0 10px rgba(255,255,255, 0.75);
-  }
-  header h2 {
-    font-weight: italic;
-    margin: 0;
-    font-size: 24px;
-    color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(255,255,255, 0.75);
+    
   }
   header a {
-    text-decoration: none;
-    color: var(--primary-color);
+    color: var(--tertiary-color);
   }
   
   header nav {
-    margin: 7px 0;
+    margin: 5px 0;
   }
   
   header nav ul {
@@ -60,7 +53,7 @@
   
   header nav ul li a {
     padding: 10px 15px;
-    font-weight: lighter;
+    font-weight: bold;
     font-size: 1.55vw;
     text-shadow: 0 0 10px rgba(255,255,255, 0.75);
   }
@@ -68,7 +61,7 @@
   header nav ul li a:hover {
     background: var(--primary-color);
     color: var(--secondary-color);
-    border-radius: 5px;
+    border-radius: 1px;
     text-shadow: none;
   }
   /* Header end */
@@ -125,6 +118,22 @@
   background-color: var(--primary-color);
   color: var(--tertiary-color);
 }
+.work-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(4, minmax(100px, auto));
+}
+.work-grid-item {
+  background-position: center;
+  max-height: 100%;
+  background-size: cover;
+  width:100%;
+  border: solid var(--secondary-color);
+}
+
+.work-grid-item:hover  {
+  opacity: .1;
+}
 /*work end*/
 /*contact Me*/
 /*contact Me end*/
@@ -153,4 +162,8 @@ footer div {
 /*Footer end*/
 .flex-row {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-self:flex-start;
+  justify-content: space-between;
 }
